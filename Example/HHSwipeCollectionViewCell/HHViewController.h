@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface HHViewController : UIViewController
+@interface HHViewController : UICollectionViewController
 
 @end

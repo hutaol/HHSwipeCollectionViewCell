@@ -20,6 +20,11 @@ it, simply add the following line to your Podfile:
 pod 'HHSwipeCollectionViewCell'
 ```
 
+## 参考
+
+[ZLCSwipeCollectionViewCell](https://gist.github.com/EvoIos/aee7497ee845b9083a737ba1d718172e)
+[CADRACSwippableCell](https://github.com/joanromano/CADRACSwippableCell)
+
 ## Author
 
 hutaol, 1325049637@qq.com

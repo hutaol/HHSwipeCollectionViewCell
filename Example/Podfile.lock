@@ -1,0 +1,27 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - HHSwipeCollectionViewCell (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - HHSwipeCollectionViewCell (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  HHSwipeCollectionViewCell:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  HHSwipeCollectionViewCell: 99b8e7726575979b2e3df1c35c0e4249f637a265
+
+PODFILE CHECKSUM: 29104c0f3f9712b35e02c9f5a11e00a90e202ed4
+
+COCOAPODS: 1.11.2
