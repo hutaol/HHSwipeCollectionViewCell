@@ -10,7 +10,6 @@
 		0DA29C9E70B8A5E6873B538AB7368D82 /* Pods-HHSwipeCollectionViewCell_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A657ECD2C71DB805964CC3DB8B6CC1ED /* Pods-HHSwipeCollectionViewCell_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E9CC5A3B22B24E528E7864DE4BB09FC /* Pods-HHSwipeCollectionViewCell_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9182EAE4D77041F249F4737BF2D85FEA /* Pods-HHSwipeCollectionViewCell_Example-dummy.m */; };
 		1F84FE646CD1D7BAFFB58C243277AFF8 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		20B93340710D8ECECBEF99C15F5AC4A1 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB79B4EC983A8AFABAAF5C2888E456 /* ReplaceMe.m */; };
 		2975A09730FD83DC0897129A11EA6585 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */; };
 		2B88C28DD20CBFA7B3AEB21A365197FE /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CB61F6FA511CAACB43A50DC3A82E0DD /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */; };
@@ -73,7 +72,6 @@
 		1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		1DA24A38BA9EE106B59E3D4C8DD1CE0E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		1E7A4B5B10E76953C92B81DDC05853C3 /* Pods-HHSwipeCollectionViewCell_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HHSwipeCollectionViewCell_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1EBB79B4EC983A8AFABAAF5C2888E456 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = HHSwipeCollectionViewCell/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
 		277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 			children = (
 				B5E6A2EEB69F330795B559759CFF406A /* HHSwipeCollectionViewCell.h */,
 				D00F0D87BBC15C3659A9F1ECADF38D9C /* HHSwipeCollectionViewCell.m */,
-				1EBB79B4EC983A8AFABAAF5C2888E456 /* ReplaceMe.m */,
 				BCCAAE3B396FDF9F22957B185FB34534 /* Pod */,
 				4C2B5AA155C6A9B24340F90A3459B46D /* Support Files */,
 			);
@@ -568,7 +565,6 @@
 			files = (
 				9FE01140F49A97E96CFB8F6910FA080A /* HHSwipeCollectionViewCell.m in Sources */,
 				F1314F7872C6E636A316329A4AF091DE /* HHSwipeCollectionViewCell-dummy.m in Sources */,
-				20B93340710D8ECECBEF99C15F5AC4A1 /* ReplaceMe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

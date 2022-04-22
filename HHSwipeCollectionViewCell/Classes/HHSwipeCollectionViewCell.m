@@ -17,6 +17,7 @@
         _font = [UIFont systemFontOfSize:17];
         _color = [UIColor whiteColor];
         _backgroundColor = [UIColor redColor];
+        _horizontalPadding = 14;
     }
     return self;
 }
@@ -27,12 +28,38 @@
         _font = [UIFont systemFontOfSize:17];
         _color = [UIColor whiteColor];
         _backgroundColor = [UIColor redColor];
+        _horizontalPadding = 14;
         _title = title;
         _block = block;
     }
     return self;
 }
 
+- (instancetype)initWithTitle:(NSString *)title backgroundColor:(UIColor *)backgroundColor block:(HHSwipeActionBlock)block {
+    self = [super init];
+    if (self) {
+        _font = [UIFont systemFontOfSize:17];
+        _color = [UIColor whiteColor];
+        _backgroundColor = backgroundColor;
+        _horizontalPadding = 14;
+        _title = title;
+        _block = block;
+    }
+    return self;
+}
+
+- (instancetype)initWithTitle:(NSString *)title backgroundColor:(UIColor *)backgroundColor font:(UIFont *)font block:(HHSwipeActionBlock)block {
+    self = [super init];
+    if (self) {
+        _font = font;
+        _color = [UIColor whiteColor];
+        _backgroundColor = backgroundColor;
+        _horizontalPadding = 14;
+        _title = title;
+        _block = block;
+    }
+    return self;
+}
 
 @end
 
@@ -69,7 +96,6 @@ NSString * const SwipeCollectionViewCurrentSwipeCell = @"currentSwipeCell";
 @end
 
 @implementation HHSwipeCollectionViewCell
-
 
 - (void)prepareForReuse {
     [super prepareForReuse];
@@ -268,9 +294,20 @@ NSString * const SwipeCollectionViewCurrentSwipeCell = @"currentSwipeCell";
         CGSize textSize = [action.title sizeWithAttributes:@{NSFontAttributeName:action.font}];
         UIButton *button = [self hh_buttonWithAction:action];
         button.tag = i;
-        CGFloat width = textSize.width + 20;
+        CGFloat width = textSize.width + action.horizontalPadding * 2;
 
         button.frame = CGRectMake(i*width, 0, width, self.frame.size.height);
+        
+        // FIXME: 右边圆角，更加cell圆角设置最后一个按钮
+        if (i == actions.count - 1) {
+            if (self.layer.cornerRadius > 0) {
+                UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:button.bounds byRoundingCorners:UIRectCornerTopRight|UIRectCornerBottomRight cornerRadii:CGSizeMake(self.layer.cornerRadius, self.layer.cornerRadius)];
+                CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+                maskLayer.frame = button.bounds;
+                maskLayer.path = maskPath.CGPath;
+                button.layer.mask = maskLayer;
+            }
+        }
         
         [self.revealView addSubview:button];
         
@@ -278,7 +315,6 @@ NSString * const SwipeCollectionViewCurrentSwipeCell = @"currentSwipeCell";
     }
     
     self.revealView.frame = CGRectMake(self.frame.size.width - sw, 0, sw, self.frame.size.width);
-    
     
 }
 
