@@ -264,7 +264,7 @@ NSString * const SwipeCollectionViewCurrentSwipeCell = @"currentSwipeCell";
     if (!_snapBackgroundView) {
         _snapBackgroundView = ({
             UIView *tmpView = [[UIView alloc] initWithFrame:self.bounds];
-            tmpView.backgroundColor = [UIColor whiteColor];
+            tmpView.backgroundColor = self.backgroundColor;
             tmpView;
         });
     }
@@ -287,6 +287,9 @@ NSString * const SwipeCollectionViewCurrentSwipeCell = @"currentSwipeCell";
 
 - (void)setActions:(NSArray *)actions {
     _actions = actions;
+    
+    // FIXME: 不同actions，会导致错误，设置actions先移除再创建
+    [self.revealView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
     CGFloat sw = 0;
     for (int i = 0; i < actions.count; i ++) {
