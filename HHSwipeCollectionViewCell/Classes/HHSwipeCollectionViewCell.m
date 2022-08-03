@@ -299,7 +299,7 @@ NSString * const SwipeCollectionViewCurrentSwipeCell = @"currentSwipeCell";
         button.tag = i;
         CGFloat width = textSize.width + action.horizontalPadding * 2;
 
-        button.frame = CGRectMake(i*width, 0, width, self.frame.size.height);
+        button.frame = CGRectMake(sw, 0, width, self.frame.size.height);
         
         // FIXME: 右边圆角，更加cell圆角设置最后一个按钮
         if (i == actions.count - 1) {
